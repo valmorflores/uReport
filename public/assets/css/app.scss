@@ -1,0 +1,29 @@
+* {
+    margin: 0px;
+    padding: 0;
+}
+
+
+:root {
+    --body-bg: #f6f6f6;
+    --body-color: #555;
+    --link-color: #222;
+    --link-color-hover: #ec5840;
+}
+
+.dark-mode:root {
+    --body-bg: #222;
+    --body-color: white;    
+    --link-color: white;
+    --link-color-hover: #ec5840;
+}
+
+.app-body {
+    background-color: var(--body-bg);
+    color: var(--body-color);
+}
+
+.app-text {
+    color: var(--body-color);
+}
+
