@@ -1,0 +1,126 @@
+<?php
+
+namespace App\Models;
+
+use CodeIgniter\Model;
+
+class LocaisTrabalhoModel extends Model
+{
+    public function getAll(){
+        $alocais[] = 'NENHUM';
+        $alocais[] = 'ALMOXARIFADO (APOIO)';
+        $alocais[] = 'CDA-CENTRAL DE DOC E AUTORIZ (APOIO)';
+        $alocais[] = 'CENTRAL DE AGENDAMENTO (APOIO)';
+        $alocais[] = 'CENTRAL DE UTILIDADES (APOIO)';
+        $alocais[] = 'CENTRO MAT ESTERELIZADO (APOIO)';
+        $alocais[] = 'COMISSAO CONTROLE DE INFECCAO (APOIO)';
+        $alocais[] = 'COMPRAS (APOIO)';
+        $alocais[] = 'CORPO CLINICO (APOIO)';
+        $alocais[] = 'CORREIO MÉDICO (APOIO)';
+        $alocais[] = 'COSTURA (APOIO)';
+        $alocais[] = 'ENGENHARIA BIOMEDICA (APOIO)';
+        $alocais[] = 'FARMACIA (APOIO)';
+        $alocais[] = 'GER. DE MATERIAIS (APOIO)';
+        $alocais[] = 'GESTÃO AMBIENTAL (APOIO)';
+        $alocais[] = 'HIGIENIZACAO (APOIO)';
+        $alocais[] = 'HOTELARIA - RECEPCAO (APOIO)';
+        $alocais[] = 'INFORMATICA (APOIO)';
+        $alocais[] = 'INTERNAÇÃO (APOIO)';
+        $alocais[] = 'JOVEM APRENDIZ (APOIO)';
+        $alocais[] = 'LAVANDERIA (APOIO)';
+        $alocais[] = 'MANUTENCAO / OFICINA (APOIO)';
+        $alocais[] = 'MEDICO DO TRABALHO (APOIO)';
+        $alocais[] = 'NUTRIÇÃO DIETETICA E ASSISTENC (APOIO)';
+        $alocais[] = 'OUVIDORIA (APOIO)';
+        $alocais[] = 'PSICOLOGIA CLINICA (APOIO)';
+        $alocais[] = 'ROUPARIA (APOIO)';
+        $alocais[] = 'SAME (APOIO)';
+        $alocais[] = 'SECRET. DA PEDIATRIA (APOIO)';
+        $alocais[] = 'SECRETARIA DA HEMODINAMICA (APOIO)';
+        $alocais[] = 'SECRETARIA DE ASSIT. MEDICA (APOIO)';
+        $alocais[] = 'SECRETARIA DO CENTRO CIRURGICO (APOIO)';
+        $alocais[] = 'SEGURANCA DO TRABALHO (APOIO)';
+        $alocais[] = 'SEGURANCA PATRIMONIAL (APOIO)';
+        $alocais[] = 'SERVICO SOCIAL (APOIO)';
+        $alocais[] = 'SUPERVISAO DE ENFERMAGEM (APOIO)';
+        $alocais[] = 'TELEFONIA / COMUNICAÇÃO (APOIO)';
+        $alocais[] = 'ADMINISTRATIVO - ASSESSORIA DE IMPRENSA';
+        $alocais[] = 'ADMINISTRATIVO - ASSESSORIA JURIDICA';
+        $alocais[] = 'ADMINISTRATIVO - CAPELA';
+        $alocais[] = 'ADMINISTRATIVO - CARGOS / SALARIOS';
+        $alocais[] = 'ADMINISTRATIVO - CONSELHO DIRETOR';
+        $alocais[] = 'ADMINISTRATIVO - CONTABILIDADE';
+        $alocais[] = 'ADMINISTRATIVO - CONTROLADORIA - CUSTOS E ORÇAM';
+        $alocais[] = 'ADMINISTRATIVO - DESPESAS FINANCEIRAS NÃO OPERA';
+        $alocais[] = 'ADMINISTRATIVO - DIRETORIA';
+        $alocais[] = 'ADMINISTRATIVO - DIRETORIA TÉCNICA';
+        $alocais[] = 'ADMINISTRATIVO - EXPEDIÇÃO - DEP COMERCIAL';
+        $alocais[] = 'ADMINISTRATIVO - EXPEDIÇÃO - SUS';
+        $alocais[] = 'ADMINISTRATIVO - FATURAMENTO CONV. E AUDITORIA';
+        $alocais[] = 'ADMINISTRATIVO - FATURAMENTO SUS';
+        $alocais[] = 'ADMINISTRATIVO - FINANCEIRO';
+        $alocais[] = 'ADMINISTRATIVO - GERENCIA DE R.H';
+        $alocais[] = 'ADMINISTRATIVO - RECRUTAMENTO/SELECAO/DESENVOLV';
+        $alocais[] = 'ADMINISTRATIVO - SETOR FISCAL';
+        $alocais[] = 'ADMINISTRATIVO - SETOR PESSOAL';
+        $alocais[] = 'ADMINISTRATIVO - SUPERINTENDENCIA';
+        $alocais[] = 'AMBULATORIO DE ENFERMAGEM';
+        $alocais[] = 'AMBULATORIO SUS';
+        $alocais[] = 'CARDIOLOGIA FETAL';
+        $alocais[] = 'C.C.L. ALA NORTE - 2º ANDAR';
+        $alocais[] = 'C.C.L. ALA NORTE - 3º ANDAR';
+        $alocais[] = 'C.C.L. ALA NORTE - 4º ANDAR';
+        $alocais[] = 'C.C.L. ALA NORTE - 5º ANDAR';
+        $alocais[] = 'CENTRO CIRURGICO';
+        $alocais[] = 'CENTRO CIRURGICO 2';
+        $alocais[] = 'CENTRO CLINICO (CONVENIOS)';
+        $alocais[] = 'CENTRO DE REABILITACAO';
+        $alocais[] = 'CENTRO TRAT. INTENSIVO ADULTO';
+        $alocais[] = 'CENTRO TRAT. INTENSIVO PEDIATR';
+        $alocais[] = 'CONSULTORIO MEDICO PARTICULAR';
+        $alocais[] = 'ECOCARDIOGRAMA';
+        $alocais[] = 'ELETROCARDIOGRAMA';
+        $alocais[] = 'EMERGENCIA CONVENIO/PARTICULAR';
+        $alocais[] = 'EMERGENCIA SUS';
+        $alocais[] = 'ERGOMETRIA';
+        $alocais[] = 'HEMODIÁLISE';
+        $alocais[] = 'HEMODINÂMICA EEF';
+        $alocais[] = 'HEMODINAMICA INTERNAÇÃO';
+        $alocais[] = 'HEMODINAMICA PROCEDIMENTOS';
+        $alocais[] = 'HEMOTERAPIA';
+        $alocais[] = 'INALOTERAPIA';
+        $alocais[] = 'LABORATORIO';
+        $alocais[] = 'MAPA / HOLTER / TILT-TEST';
+        $alocais[] = 'OPO - ORGAN. PROCURA DE ORGÃOS';
+        $alocais[] = 'PNEUMOLOGIA';
+        $alocais[] = 'RADIOLOGIA';
+        $alocais[] = 'SALA DE RECUPERAÇÃO CC2';
+        $alocais[] = 'SERVIÇO DE ECOGRAFIA 2';
+        $alocais[] = 'UNIDADE INTERNACAO 1B';
+        $alocais[] = 'UNIDADE INTERNACAO 2A';
+        $alocais[] = 'UNIDADE INTERNACAO 2B';
+        $alocais[] = 'UNIDADE INTERNACAO 3A';
+        $alocais[] = 'UNIDADE INTERNACAO 3A-ALA SUL';
+        $alocais[] = 'UNIDADE INTERNACAO 3B';
+        $alocais[] = 'UNIDADE POS OPERATORIA-1';
+        $alocais[] = 'ENSINO E PESQUISA - CAPACITAÇÃO NIVEL TECNICO';
+        $alocais[] = 'ENSINO E PESQUISA - CENTRO DE CARDIOL EXPERIMENTAL';
+        $alocais[] = 'ENSINO E PESQUISA - CENTRO DE PESQUISA CLINICA';
+        $alocais[] = 'ENSINO E PESQUISA - DIRETORIA CIENTIFICA';
+        $alocais[] = 'ENSINO E PESQUISA - EPIDEMIOLOGIA';
+        $alocais[] = 'ENSINO E PESQUISA - EXTENSÃO DE GRADUAÇÃO';
+        $alocais[] = 'ENSINO E PESQUISA - LAB. CARD. MOLECULAR CELULAR';
+        $alocais[] = 'ENSINO E PESQUISA - LAB. INVESTIGAÇÃO CLINICA';
+        $alocais[] = 'ENSINO E PESQUISA - PPG CIENCIAS DA SAUDE';
+        $alocais[] = 'ENSINO E PESQUISA - PPG DOCÊNCIA NA ÁREA DE SAÚDE';
+        $alocais[] = 'ENSINO E PESQUISA - PPG ENFERMAGEM';
+        $alocais[] = 'ENSINO E PESQUISA - PPG MESTRADO PROFISSIONAL';
+        $alocais[] = 'ENSINO E PESQUISA - TEC. ENFERMAGEM';
+        $alocais[] = 'ENSINO E PESQUISA - UNIDADE DE PESQUISA';
+        $alocais[] = 'ENSINO E PESQUISA - UNIDADE ENSINO';
+        asort($alocais);
+        return $alocais;       
+         
+    }
+
+}
