@@ -42,7 +42,14 @@ class AdminUserModel extends Model
     }
 
     public function getAllDataCount($limit = null, $page = null){
-        $builder = $this->db->query('SELECT count(*) AS COUNT_FIELD FROM DBAMV.TIADMIN_USER');
+        //var_dump($this->db);
+        if ( $this->db->DBDriver == 'Firebird' ){
+            $builder = $this->db->query('SELECT count(*) AS COUNT_FIELD FROM TBLCLIENTS');
+        }
+        else
+        {
+            $builder = $this->db->query('SELECT count(*) AS COUNT_FIELD FROM DBAMV.TIADMIN_USER');
+        }
         $result = $builder->getResult();
         $result_count = 0;
         foreach($result as $row){
